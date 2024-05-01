@@ -29,9 +29,9 @@ def index(request):
                 'city': city_name,
                 'description': response['weather'][0]['description'],
                 'icon': response['weather'][0]['icon'],
-                'temperature': 'Temperature: ' + str(response['main']['temp']) + ' °C',
+                'temperature': 'Temperature: ' + str(response['main']['temp']) + ' °F',
                 'country_code': response['sys']['country'],
-                'wind': 'Wind: ' + str(response['wind']['speed']) + 'km/h',
+                'wind': 'Wind: ' + str(response['wind']['speed']) + 'mph',
                 'humidity': 'Humidity: ' + str(response['main']['humidity']) + '%',
                 'time': formatted_time
             }
