@@ -17,7 +17,7 @@ def index(request):
             # getting the city name from the form input   
             city_name = request.POST.get('city')
             # the url for current weather, takes city_name and API_KEY   
-            url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}&units=metric'
+            url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}&units=imperial'
             # converting the request response to json   
             response = requests.get(url).json()
             # getting the current time
@@ -29,9 +29,9 @@ def index(request):
                 'city': city_name,
                 'description': response['weather'][0]['description'],
                 'icon': response['weather'][0]['icon'],
-                'temperature': 'Temperature: ' + str(response['main']['temp']) + ' °C',
+                'temperature': 'Temperature: ' + str(response['main']['temp']) + ' °F',
                 'country_code': response['sys']['country'],
-                'wind': 'Wind: ' + str(response['wind']['speed']) + 'km/h',
+                'wind': 'Wind: ' + str(response['wind']['speed']) + 'mph',
                 'humidity': 'Humidity: ' + str(response['main']['humidity']) + '%',
                 'time': formatted_time
             }
