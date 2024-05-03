@@ -16,8 +16,7 @@ def index(request):
             API_KEY = '7fbda08677dac82a98a9081c2ae362bc'
             # getting the city name from the form input   
             city_name = request.POST.get('city')
-            state = request.POST.get('state_code')
-            country = request.POST.get('country')
+
             # the url for current weather, takes city_name and API_KEY   
             url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}&units=imperial'
             # converting the request response to json   
