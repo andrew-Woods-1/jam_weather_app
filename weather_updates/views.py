@@ -22,6 +22,15 @@ def index(request):
             url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name},{state},{country}&appid={API_KEY}&units=imperial'
             # converting the request response to json   
             response = requests.get(url).json()
+
+            lat = response['coord']['lat']
+            lon = response['coord']['lon']
+            limit = 2
+
+            url_state = f'http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit={limit}&appid={API_KEY}'
+            response_state = requests.get(url_state).json()
+
+
             # getting the current time
             current_time = datetime.now()
             # formatting the time using directives, it will take this format Day, Month Date Year, Current Time 
@@ -29,7 +38,7 @@ def index(request):
             # bundling the weather information in one dictionary
             city_weather_update = {
                 'city': city_name,
-                'state': state,
+                'state': response_state[0]['state'],
                 'description': response['weather'][0]['description'],
                 'icon': response['weather'][0]['icon'],
                 'temperature': 'Temperature: ' + str(response['main']['temp']) + ' °F',
