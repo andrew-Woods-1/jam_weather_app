@@ -3,7 +3,7 @@
 <div class="row justify-content-center my-5">
   <div class="col-md-5">
     <div class="mt-4 p-5 bg-success text-white rounded mb-3">
-      <h1>Weather Update App</h1>
+      <h1>JAM Weather App</h1>
     </div>
     <form action="." method="POST">
       {% csrf_token %}
@@ -31,10 +31,21 @@
         <div class="card-text float-end">{{ city_weather_update.time }}</div>
         <div class="card-text">
           <h5>
-             {{ city_weather_update.city }}  {{ city_weather_update.country_code }} 
+            {{ city_weather_update.city }}, {{ city_weather_update.state }} {{
+            city_weather_update.country_code }}
+          </h5>
         </div>
         <div class="card-text">
           <h6>{{ city_weather_update.temperature }}</h6>
+        </div>
+        <div class="card-text">
+          <h6>{{ city_weather_update.real_feel }}</h6>
+        </div>
+        <div class="card-text">
+          <h6>{{ city_weather_update.daily_max }}</h6>
+        </div>
+        <div class="card-text">
+          <h6>{{ city_weather_update.daily_min }}</h6>
         </div>
         <div class="card-text">
           <h6>{{ city_weather_update.description | title }}</h6>
