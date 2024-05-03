@@ -13,7 +13,7 @@ body {
 
 .mt-4.p-5.bg-success.text-white.rounded.mb-3 {
     padding: 20px;
-    background-color: #d83810;
+    background-color: #0ab2cf;
     color: white;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -22,12 +22,13 @@ body {
 }
 
 .input-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
 .btn.btn-success {
-  background-color: #28a745;
-  color: white;
+    background-color: #090cc7b0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
 }
 
 .card {
@@ -36,11 +37,11 @@ body {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 10px;
     
 }
 
 .card-text {
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 5px;
+    font-size: 24px;
 }
