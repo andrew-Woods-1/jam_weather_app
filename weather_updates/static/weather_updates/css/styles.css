@@ -1,0 +1,47 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.row.justify-content-center.my-5 {
+  margin-top: 50px;
+}
+
+.col-md-5 {
+  margin: auto;
+  width: 50%;
+}
+
+.mt-4.p-5.bg-success.text-white.rounded.mb-3 {
+    padding: 20px;
+    background-color: #0ab2cf;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    justify-content: center;
+    display: flex;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+.btn.btn-success {
+    background-color: #0ab2cf;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.card {
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.card-body {
+    padding: 10px;
+    
+}
+
+.card-text {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
