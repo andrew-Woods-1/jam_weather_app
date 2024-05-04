@@ -36,7 +36,7 @@ def index(request):
             formatted_time = current_time.strftime("%A, %B %d %Y, %H:%M:%S %p")
             # bundling the weather information in one dictionary
             city_weather_update = {
-                'city': city_name,
+                'city': city_name + ",",
                 'state': response_state[0]['state'],
                 'description': response['weather'][0]['description'],
                 'icon': response['weather'][0]['icon'],
