@@ -1,6 +1,6 @@
 <!-- extends is for inheriting from the base.html -->
 {% extends 'weather_updates/base.html' %} {% block content %}
-{% extends 'weather_updates/base.html' %} {% block content %}
+
 <div class="row justify-content-center my-5">
   <div class="col-md-5">
     <div class="mt-4 p-5 bg-success text-white rounded mb-3">
@@ -32,7 +32,7 @@
         <div class="card-text float-end">{{ city_weather_update.time }}</div>
         <div class="card-text">
           <h5>
-            {{ city_weather_update.city }}, {{ city_weather_update.state }},
+            {{ city_weather_update.city }} {{ city_weather_update.state }}
             {{city_weather_update.country_code }}
           </h5>
         </div>
