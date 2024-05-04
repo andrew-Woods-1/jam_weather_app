@@ -12,36 +12,47 @@ body {
 }
 
 .mt-4.p-5.bg-success.text-white.rounded.mb-3 {
-    padding: 20px;
-    background-color: #0ab2cf;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    justify-content: center;
-    display: flex;
+  padding: 20px;
+  background-color: #0ab2cf;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  justify-content: center;
+  display: flex;
 }
 
 .input-group {
-    margin-bottom: 20px;
-}
-.btn.btn-success {
-    background-color: #0ab2cf;
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .card {
-    margin-top: 20px;
-    border: 1px solid black;
+  margin-top: 20px;
+  border: 1px solid black;
 }
 
 .card-body {
-    padding: 10px;
-    
+  padding: 10px;
 }
 
 .card-text {
-    margin-bottom: 5px;
-    font-size: 24px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.btn.search-btn {
+  background-color: #b5c200;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn.search-btn:hover {
+  background-color: white;
+  color: black;
 }
